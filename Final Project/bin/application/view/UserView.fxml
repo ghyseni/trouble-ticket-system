@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.UserController">
+	<children>
+		<TextField fx:id="userIdText" layoutX="233.0" layoutY="41.0"
+			prefHeight="25.0" prefWidth="67.0" promptText="User ID" />
+		<Label layoutX="234.0" layoutY="21.0" text="User ID" />
+		<Button fx:id="searchUserBtn" layoutX="234.0" layoutY="70.0"
+			mnemonicParsing="false" onAction="#searchUser" prefHeight="25.0"
+			prefWidth="76.0" text="Search by ID" />
+		<Button fx:id="updateUserBtn" visible="false" layoutX="97.0"
+			layoutY="203.0" mnemonicParsing="false" onAction="#updateUser"
+			prefHeight="25.0" prefWidth="56.0" text="Update" />
+		<Button fx:id="deleteUserBtn" layoutX="97.0" layoutY="275.0"
+			mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0"
+			prefWidth="56.0" text="Delete" />
+		<Button fx:id="addUserBtn" layoutX="97.0" layoutY="174.0"
+			mnemonicParsing="false" onAction="#insertUser" text="Add User" />
+		<VBox layoutX="97.0" layoutY="24.0" spacing="4.0">
+			<children>
+				<TextField fx:id="userNameText" prefHeight="25.0"
+					prefWidth="120.0" promptText="Username" />
+				<PasswordField fx:id="newPasswordText" prefHeight="25.0"
+					prefWidth="120.0" promptText="Password" />
+				<TextField fx:id="firstNameText" prefHeight="25.0"
+					prefWidth="120.0" promptText="First Name" />
+				<TextField fx:id="lastNameText" prefHeight="25.0"
+					prefWidth="120.0" promptText="Last Name" />
+				<ComboBox fx:id="roleCombo" prefHeight="25.0" prefWidth="120.0"
+					promptText="Role" />
+			</children>
+		</VBox>
+		<VBox layoutX="9.0" layoutY="28.0" prefWidth="67.0" spacing="12.0">
+			<children>
+				<Label text="Username" />
+				<Label text="Password" />
+				<Label text="First Name" />
+				<Label text="Last Name" />
+				<Label text="Role" />
+			</children>
+		</VBox>
+
+		<TableView fx:id="userTable" editable="true" layoutX="233.0"
+			layoutY="102.0" prefHeight="234.0" prefWidth="393.0"
+			tableMenuButtonVisible="true">
+			<columns>
+				<TableColumn fx:id="userIdColumn" prefWidth="57.0" text="Id" />
+				<TableColumn fx:id="usernameColumn" prefWidth="75.0"
+					text="Username" />
+				<TableColumn fx:id="userFirstNameColumn" prefWidth="73.0"
+					text="FirstName" />
+				<TableColumn fx:id="userLastNameColumn" prefWidth="73.0"
+					text="LastName" />
+				<TableColumn fx:id="userPasswordColumn" prefWidth="73.0"
+					text="Password" />
+				<TableColumn fx:id="userRoleColumn" prefWidth="73.0"
+					text="Role" />
+			</columns>
+		</TableView>
+		<Button fx:id="searchUsersBtn" layoutX="396.0" layoutY="70.0"
+			mnemonicParsing="false" onAction="#searchUsers" prefHeight="25.0"
+			prefWidth="139.0" text="Search" />
+	</children>
+</AnchorPane>

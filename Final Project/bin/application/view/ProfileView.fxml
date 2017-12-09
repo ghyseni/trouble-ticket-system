@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="344.0" prefWidth="600.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.controller.ProfileController">
+	<children>
+		<TextField fx:id="userIdText" visible="false" layoutX="233.0"
+			layoutY="41.0" prefHeight="25.0" prefWidth="67.0" promptText="User ID" />
+		<Label layoutX="9.0" layoutY="21.0" text="Welcome to trouble ticket system." />
+		<Label fx:id="usernameLbl" layoutX="234.0" layoutY="21.0" text="" />
+		<Label fx:id="userIdLbl" visible="false" />
+		<Label layoutX="9.0" layoutY="41.0"
+			text="Go to menu to be able to view, add, delete or update tickets." />
+		<Label fx:id="resultLbl" layoutX="9.0" layoutY="224.0" text="" />
+		<Button fx:id="updateUserBtn" layoutX="97.0" layoutY="190.0"
+			mnemonicParsing="false" onAction="#updateUser" prefHeight="25.0"
+			prefWidth="56.0" text="Update" />
+		<VBox layoutX="97.0" layoutY="65.0" spacing="4.0">
+			<children>
+				<TextField fx:id="userNameText" prefHeight="25.0"
+					prefWidth="120.0" promptText="Username" />
+				<PasswordField fx:id="newPasswordText" prefHeight="25.0"
+					prefWidth="120.0" promptText="Password" />
+				<TextField fx:id="firstNameText" prefHeight="25.0"
+					prefWidth="120.0" promptText="First Name" />
+				<TextField fx:id="lastNameText" prefHeight="25.0"
+					prefWidth="120.0" promptText="Last Name" />
+				<ComboBox fx:id="roleCombo" visible="false" prefHeight="25.0"
+					prefWidth="120.0" promptText="Role" />
+			</children>
+		</VBox>
+		<VBox layoutX="9.0" layoutY="69.0" prefWidth="67.0" spacing="12.0">
+			<children>
+				<Label text="Username" />
+				<Label text="Password" />
+				<Label text="First Name" />
+				<Label text="Last Name" />
+			</children>
+		</VBox>
+
+	</children>
+</AnchorPane>

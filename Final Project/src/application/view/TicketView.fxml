@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.TicketController">
+	<children>
+		<TextField fx:id="ticketIdText" layoutX="233.0" layoutY="41.0"
+			prefHeight="25.0" prefWidth="67.0" promptText="Ticket ID" />
+		<Label layoutX="234.0" layoutY="21.0" text="Ticket ID" />
+		<Button fx:id="searchTicketBtn" layoutX="234.0" layoutY="70.0"
+			mnemonicParsing="false" onAction="#searchTicket" prefHeight="25.0"
+			prefWidth="76.0" text="Search by ID" />
+		<Button fx:id="openTicketBtn" visible="false" layoutX="314.0"
+			layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" text="Ticket Tasks" />
+
+		<Button fx:id="addTicketBtn" layoutX="97.0" layoutY="237.0"
+			mnemonicParsing="false" onAction="#insertTicket" text="Add Ticket" />
+		<Button fx:id="updateTicketBtn" visible="false" layoutX="97.0"
+			layoutY="207.0" mnemonicParsing="false" onAction="#updateTicket"
+			prefHeight="25.0" prefWidth="56.0" text="Update" />
+		<Button fx:id="deleteTicketBtn" layoutX="97.0" layoutY="267.0"
+			mnemonicParsing="false" onAction="#deleteTicket" prefHeight="25.0"
+			prefWidth="56.0" text="Delete" />
+		<TextField fx:id="ticketKeywordText" layoutX="308.0"
+			layoutY="41.0" prefHeight="25.0" prefWidth="120.0" promptText="Keyword"
+			text="" />
+		<Label layoutX="308.0" layoutY="21.0" text="Keyword" />
+		<VBox layoutX="97.0" layoutY="24.0" spacing="4.0">
+			<children>
+				<TextField fx:id="ticketNameText" prefHeight="25.0"
+					prefWidth="120.0" promptText="Name" />
+				<TextArea fx:id="ticketDescriptionTextArea" prefHeight="60.0"
+					prefWidth="120.0" promptText="Description" />
+				<ComboBox fx:id="departmentCombo" prefHeight="25.0"
+					prefWidth="120.0" promptText="Department" />
+				<TextField fx:id="ticketIssuerText" prefHeight="25.0"
+					prefWidth="120.0" promptText="Issuer" />
+				<ComboBox fx:id="statusCombo" prefHeight="25.0" prefWidth="120.0"
+					promptText="Status" value="Open" />
+			</children>
+		</VBox>
+		<VBox layoutX="9.0" layoutY="28.0" prefWidth="67.0" spacing="12.0">
+			<children>
+				<Label text="Ticketname" />
+				<Label text="Description" />
+				<Label text="" />
+				<Label text="Department" />
+				<Label text="Issuer" />
+				<Label text="Status" />
+			</children>
+		</VBox>
+		<TableView fx:id="ticketTable" editable="true" layoutX="233.0"
+			layoutY="102.0" prefHeight="300.0" tableMenuButtonVisible="true">
+			<columns>
+				<TableColumn fx:id="ticketIdColumn" prefWidth="57.0"
+					text="Id" />
+				<TableColumn fx:id="ticketNameColumn" prefWidth="75.0"
+					text="Name" />
+				<TableColumn fx:id="ticketDescriptionColumn" prefWidth="120.0"
+					text="Description" />
+				<TableColumn fx:id="ticketDepartmentColumn" prefWidth="73.0"
+					text="Department" />
+				<TableColumn fx:id="ticketIssuerColumn" prefWidth="73.0"
+					text="Issuer" />
+				<TableColumn fx:id="ticketUsernameColumn" prefWidth="73.0"
+					text="Username" />
+				<TableColumn fx:id="ticketStatusColumn" prefWidth="73.0"
+					text="Status" />
+				<TableColumn fx:id="ticketCreatedAtColumn" prefWidth="73.0"
+					text="Created at" />
+				<TableColumn fx:id="ticketUpdatedAtColumn" prefWidth="73.0"
+					text="Updated at" />
+			</columns>
+		</TableView>
+		<Button fx:id="searchTicketsBtn" layoutX="396.0" layoutY="70.0"
+			mnemonicParsing="false" onAction="#searchTickets" prefHeight="25.0"
+			prefWidth="139.0" text="Search" />
+
+		<ComboBox fx:id="searchStatusCombo" layoutX="440.0" layoutY="41.0"
+			prefHeight="25.0" prefWidth="120.0" promptText="Status" />
+	</children>
+</AnchorPane>

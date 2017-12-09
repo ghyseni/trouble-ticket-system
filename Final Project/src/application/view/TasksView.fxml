@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.TasksController">
+	<children>
+		<TextField fx:id="taskIdText" layoutX="233.0" layoutY="41.0"
+			prefHeight="25.0" prefWidth="67.0" promptText="Task ID" />
+		<Label layoutX="234.0" layoutY="21.0" text="Task ID" />
+		<Button fx:id="searchTaskBtn" layoutX="234.0" layoutY="70.0"
+			mnemonicParsing="false" onAction="#searchTask" prefHeight="25.0"
+			prefWidth="56.0" text="Search" />
+
+		<Button fx:id="addTaskBtn" layoutX="97.0" layoutY="237.0"
+			mnemonicParsing="false" onAction="#insertTask" text="Add Task" />
+		<Button fx:id="updateTaskBtn" visible="false" layoutX="97.0"
+			layoutY="207.0" mnemonicParsing="false" onAction="#updateTask"
+			prefHeight="25.0" prefWidth="56.0" text="Update" />
+		<Button fx:id="deleteTaskBtn" layoutX="97.0" layoutY="267.0"
+			mnemonicParsing="false" onAction="#deleteTask" prefHeight="25.0"
+			prefWidth="56.0" text="Delete" />
+		<TextField fx:id="taskKeywordText" layoutX="308.0" layoutY="41.0"
+			prefHeight="25.0" prefWidth="120.0" promptText="Keyword" text="" />
+		<Label layoutX="308.0" layoutY="21.0" text="Keyword" />
+		<VBox layoutX="97.0" layoutY="24.0" spacing="4.0">
+			<children>
+				<TextField fx:id="taskNameText" prefHeight="25.0"
+					prefWidth="120.0" promptText="Name" />
+				<TextArea fx:id="taskDescriptionTextArea" prefHeight="60.0"
+					prefWidth="120.0" promptText="Description" />
+				<TextField fx:id="assignedToText" prefHeight="25.0"
+					prefWidth="120.0" promptText="Assigned to" />
+				<ComboBox fx:id="statusCombo" prefHeight="25.0" prefWidth="120.0"
+					promptText="Status" value="Open" />
+			</children>
+		</VBox>
+		<VBox layoutX="9.0" layoutY="28.0" prefWidth="67.0" spacing="12.0">
+			<children>
+				<Label text="Taskname" />
+				<Label text="Description" />
+				<Label text="" />
+				<Label text="Assign to" />
+				<Label text="Status" />
+
+			</children>
+		</VBox>
+
+		<Separator layoutX="220.0" layoutY="14.0" orientation="VERTICAL"
+			prefHeight="333.0" prefWidth="7.0" />
+		<TableView fx:id="taskTable" editable="true" layoutX="233.0"
+			layoutY="102.0" prefHeight="300.0" tableMenuButtonVisible="true">
+			<columns>
+				<TableColumn fx:id="taskIdColumn" prefWidth="57.0" text="Id" />
+				<TableColumn fx:id="taskNameColumn" prefWidth="75.0"
+					text="Name" />
+				<TableColumn fx:id="taskDescriptionColumn" prefWidth="120.0"
+					text="Description" />
+				<TableColumn fx:id="taskAssignedToColumn" prefWidth="120.0"
+					text="Description" />
+				<TableColumn fx:id="taskStatusColumn" prefWidth="73.0"
+					text="Status" />
+				<TableColumn fx:id="taskCreatedAtColumn" prefWidth="73.0"
+					text="Created at" />
+				<TableColumn fx:id="taskUpdatedAtColumn" prefWidth="73.0"
+					text="Updated at" />
+			</columns>
+		</TableView>
+		<ComboBox fx:id="searchStatusCombo" layoutX="440.0" layoutY="41.0"
+			prefHeight="25.0" prefWidth="120.0" promptText="Status" />
+		<Button fx:id="searchTasksBtn" layoutX="440.0" layoutY="70.0"
+			mnemonicParsing="false" onAction="#searchTasks" prefHeight="25.0"
+			prefWidth="139.0" text="Search All Tasks" />
+	</children>
+</AnchorPane>
